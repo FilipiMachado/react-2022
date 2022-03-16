@@ -1,5 +1,9 @@
-export function Tweet() {
+type TweetProps = {
+  text: string;
+}
+
+export function Tweet(props: TweetProps) {
   return (
-    <h1>Tweet</h1>
+    <p>{ props.text }</p>
   )
 }
