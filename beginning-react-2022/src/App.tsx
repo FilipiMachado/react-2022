@@ -10,7 +10,7 @@ function App() {
   ])
 
   function createTweet() {
-
+    setTweets([...tweets, 'Tweet 5'])
   }
 
   return (
@@ -19,7 +19,19 @@ function App() {
         return <Tweet text={tweet} key={tweet}/>
       })}
 
-      <button onClick={createTweet}>Adicionar Tweet</button>
+      <button 
+         onClick={createTweet}
+         style={{ 
+           backgroundColor: 'purple',
+           color: '#fff',
+           padding: '12px',
+           borderRadius: '4px',
+           cursor: 'pointer',
+           border: 0,
+          }}
+        >
+          Adicionar Tweet
+      </button>
     </>
   ) 
 }
